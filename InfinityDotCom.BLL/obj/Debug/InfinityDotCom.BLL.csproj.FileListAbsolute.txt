@@ -1,0 +1,17 @@
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.BLL.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.BLL.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.Models.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.Repository.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.DatabaseContext.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\EntityFramework.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.Models.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.Repository.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.Repository.dll.config
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.DatabaseContext.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\InfinityDotCom.DatabaseContext.dll.config
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\bin\Debug\EntityFramework.xml
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\obj\Debug\InfinityDotCom.BLL.csprojAssemblyReference.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\obj\Debug\InfinityDotCom.BLL.csproj.CoreCompileInputs.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\obj\Debug\InfinityDotCom.BLL.csproj.CopyComplete
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\obj\Debug\InfinityDotCom.BLL.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.BLL\obj\Debug\InfinityDotCom.BLL.pdb

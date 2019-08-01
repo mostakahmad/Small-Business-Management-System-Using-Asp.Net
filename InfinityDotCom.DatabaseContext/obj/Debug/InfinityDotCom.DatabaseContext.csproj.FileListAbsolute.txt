@@ -1,0 +1,16 @@
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.dll.config
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.SqlServer.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.Models.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.Models.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.xml
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.SqlServer.xml
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csprojAssemblyReference.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.CoreCompileInputs.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.CopyComplete
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.initialMigration.resources
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.GenerateResource.cache

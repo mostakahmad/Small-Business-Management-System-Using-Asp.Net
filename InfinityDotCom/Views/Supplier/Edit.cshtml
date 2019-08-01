@@ -1,0 +1,116 @@
+﻿@model InfinityDotCom.Models.Models.Master
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Supplier</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container" style="margin-top : 15px;">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-5 bg-dark">
+                <h2 class="text-center" style="margin-top : 5px; color : white; background-color : black; padding : 10px;">Edit Supplier</h2>
+                <form class="form-horizontal" action="/supplier/update" method="post">
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="SupplierCode">Code</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="SupplierCode" placeholder="Enter Code" name="SupplierCode" value="@Model.Supplier.SupplierCode">
+                            <input type="hidden" class="form-control" id="ID" name="ID" value="@Model.Supplier.ID">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="SupplierName">Name</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="SupplierName" placeholder="Enter Name" name="SupplierName" value="@Model.Supplier.SupplierName">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="SupplierAddress">Address</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="SupplierAddress" placeholder="Enter Address" name="SupplierAddress" value="@Model.Supplier.SupplierAddress">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="SupplierEmail">Email</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="SupplierEmail" placeholder="Enter Email" name="SupplierEmail" value="@Model.Supplier.SupplierEmail">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="SupplierContact">Contact</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="SupplierContact" placeholder="Enter Contact" name="SupplierContact" value="@Model.Supplier.SupplierContact">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="SupplierContactPerson">Contact Person</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="SupplierContactPerson" placeholder="Enter Contact Person" name="SupplierContactPerson" value="@Model.Supplier.SupplierContactPerson">
+
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-5" style="margin-left : 290px;">
+                            <button type="submit" class="btn btn-success">Update Supplier</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Image Button
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-primary" style="height : 100px; width : 100px; margin-top : 120px;"><h1>+</h1></button>
+                <label class="control-label text-white" for="ProductImage" style="margin-left : 25px;"><bold>Image</bold></label>
+            </div>
+            -->
+
+        </div>
+    </div>
+    <div class="container" style="margin-top : 15px; margin-bottom : 250px;">
+        <table class="table table-bordered table-hover">
+            <thead class="bg-info text-center text-white">
+                <tr>
+                    <th>SL</th>
+                    <th>Code</th>
+                    <th>Name        </th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Contact Person</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="text-center" style="background-color : lightgray;">
+                @{ int sl = 1;}
+                @foreach (var supplier in Model.Suppliers)
+                {
+                    <tr>
+                        <td>@(sl++)</td>
+                        <td>@supplier.SupplierCode</td>
+                        <td>@supplier.SupplierName</td>
+                        <td>@supplier.SupplierAddress</td>
+                        <td>@supplier.SupplierEmail</td>
+                        <td>@supplier.SupplierContact</td>
+                        <td>@supplier.SupplierContactPerson</td>
+                        <td>
+                            <a href="/supplier/Edit?ID=@supplier.ID" class="btn btn-primary btn-xs" title="Edit">
+                                <span class="glyphicon glyphicon-edit">Edit</span>
+                            </a>
+                            <a href="/supplier/Delete?ID=@supplier.ID" onclick="return confirm('Are you sure to delete this !!');" class="btn btn-danger btn-xs" title="Delete">
+                                <span class="glyphicon glyphicon-trash">Delete</span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

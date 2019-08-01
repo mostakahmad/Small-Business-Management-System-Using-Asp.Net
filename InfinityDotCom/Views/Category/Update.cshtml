@@ -1,0 +1,94 @@
+﻿@model InfinityDotCom.Models.Models.Master
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Product</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body class="bg-light">
+
+    <div class="modal fade" id="categoryModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Category</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="form-horizontal" action="/category/add" method="post">
+                                    <div class="row form-group">
+                                        <label class="control-label col-md-3 text-dark" for="CategoryCode">Code</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="CategoryCode" placeholder="Enter Code" name="CategoryCode">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="control-label col-md-3 text-dark" for="CategoryName">Name</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="CategoryName" placeholder="Enter Name" name="CategoryName">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-5" style="margin-left : 320px;">
+                                            <button type="submit" class="btn btn-success">Add Category</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" style="margin-top : 15px;">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bg-info text-center text-white">
+                                <tr>
+                                    <th>SL</th>
+                                    <th>Code</th>
+                                    <th>Name        </th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" style="background-color : lightgray;">
+                                @{ int SL = 1;}
+                                @foreach (var category in Model.Categories)
+                                {
+                                    <tr>
+                                        <td>@(SL++)</td>
+                                        <td>@category.CategoryCode</td>
+                                        <td>@category.CategoryName</td>
+                                        <td>
+                                            <a href="/Category/Edit?ID=@category.ID" class="btn btn-primary btn-xs" title="Edit">
+                                                <span class="glyphicon glyphicon-edit">Edit</span>
+                                            </a>
+                                            <a href="/Category/delete?ID=@category.ID" onclick="return confirm('Are you sure to delete this !!');" class="btn btn-danger btn-xs" title="Delete">
+                                                <span class="glyphicon glyphicon-trash">Delete</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#categoryModal").modal('show');
+        });
+    </script>
+</body>
+</html>

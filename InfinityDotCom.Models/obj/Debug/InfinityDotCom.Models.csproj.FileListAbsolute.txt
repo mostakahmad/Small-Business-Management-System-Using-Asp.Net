@@ -1,0 +1,6 @@
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.Models\bin\Debug\InfinityDotCom.Models.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.Models\bin\Debug\InfinityDotCom.Models.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.Models\obj\Debug\InfinityDotCom.Models.csprojAssemblyReference.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.Models\obj\Debug\InfinityDotCom.Models.csproj.CoreCompileInputs.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.Models\obj\Debug\InfinityDotCom.Models.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.Models\obj\Debug\InfinityDotCom.Models.pdb

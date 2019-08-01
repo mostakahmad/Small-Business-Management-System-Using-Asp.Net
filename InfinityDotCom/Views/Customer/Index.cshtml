@@ -1,0 +1,115 @@
+﻿@model List<InfinityDotCom.Models.Models.Customer>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container" style="margin-top : 15px;">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-5 bg-dark">
+                <h2 class="text-center" style="margin-top : 5px; color : white; background-color : black; padding : 10px;">Add Customer</h2>
+                <form class="form-horizontal" action="/customer/index" method="post">
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="CustomerCode">Code</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="CustomerCode" placeholder="Enter Code" name="CustomerCode">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="CustomerName">Name</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="CustomerName" placeholder="Enter Name" name="CustomerName">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="CustomerAddress">Address</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="CustomerAddress" placeholder="Enter Address" name="CustomerAddress">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="CustomerEmail">Email</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="CustomerEmail" placeholder="Enter Email" name="CustomerEmail">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="CustomerContact">Contact</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="CustomerContact" placeholder="Enter Contact" name="CustomerContact">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-md-3 text-white" for="CustomerLP">Loyality Point</label>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" id="CustomerLP" placeholder="Enter Loyality Point" name="CustomerLP">
+
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-4" style="margin-left : 320px;">
+                            <button type="submit" class="btn btn-success">Add Customer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Image Button
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-primary" style="height : 100px; width : 100px; margin-top : 120px;"><h1>+</h1></button>
+                <label class="control-label text-white" for="ProductImage" style="margin-left : 25px;"><bold>Image</bold></label>
+            </div>
+            -->
+
+        </div>
+    </div>
+    <div class="container" style="margin-top : 15px; margin-bottom : 250px;">
+        <table class="table table-bordered table-hover">
+            <thead class="bg-info text-center text-white">
+                <tr>
+                    <th>SL</th>
+                    <th>Code</th>
+                    <th>Name        </th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Loyality Point</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="text-center" style="background-color : lightgray;">
+                @{ int sl = 1;}
+                @foreach (var customer in Model)
+                {
+                    <tr>
+                        <td>@(sl++)</td>
+                        <td>@customer.CustomerCode</td>
+                        <td>@customer.CustomerName</td>
+                        <td>@customer.CustomerAddress</td>
+                        <td>@customer.CustomerEmail</td>
+                        <td>@customer.CustomerContact</td>
+                        <td>@customer.CustomerLP</td>
+                        <td>
+                            <a href="/customer/Edit?ID=@customer.ID" class="btn btn-primary btn-xs" title="Edit">
+                                <span class="glyphicon glyphicon-edit">Edit</span>
+                            </a>
+                            <a href="/customer/Delete?ID=@customer.ID" onclick="return confirm('Are you sure to delete this !!');" class="btn btn-danger btn-xs" title="Delete">
+                                <span class="glyphicon glyphicon-trash">Delete</span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

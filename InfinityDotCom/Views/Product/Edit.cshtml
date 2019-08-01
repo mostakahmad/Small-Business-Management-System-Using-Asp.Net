@@ -1,0 +1,99 @@
+﻿@model InfinityDotCom.Models.Models.Master
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <form class="form-horizontal" action="/product/update" method="post">
+                    <div class="card-body">
+                        <h4 class="card-title">Update Product</h4>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="ProductCode">Product Code</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="ProductCode" placeholder="Enter Code" name="ProductCode" value="@Model.Product.ProductCode">
+								<input type="hidden" class="form-control" id="ID" name="ID" value="@Model.Product.ID">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="ProductName">Product Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="ProductName" placeholder="Enter Name" name="ProductName" value="@Model.Product.ProductName">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="CategoryID">Product Category</label>
+                            <div class="col-sm-9">
+                                <select class="col-md-12 rounded" name="CategoryID" id="CategoryID" style="height : 40px;">
+                                    <option value="@Model.Product.CategoryID" selected>@Model.Product.CategoryID</option>
+                                    @foreach (var category in Model.Categories)
+                                {
+                                    <option name="CategoryID" value="@category.ID">@category.CategoryName</option>
+                                }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="ProductROL">Product ROL</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="ProductROL" placeholder="Enter Reorder Level" name="ProductROL" value="@Model.Product.ProductROL">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="ProductDescription">Product Description</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="ProductDescription" placeholder="Enter Description" name="ProductDescription">@Model.Product.ProductDescription</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="row card-body">
+                            <div class="col-md-9"></div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Update Product</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container" style="margin-top : 15px; margin-bottom : 250px;">
+        <table class="table table-bordered table-hover">
+            <thead class="bg-info text-center text-white">
+                <tr>
+                    <th>SL</th>
+                    <th>Code</th>
+                    <th>Name        </th>
+                    <th>Category</th>
+                    <th>ROL</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="text-center" style="background-color : lightgray;">
+                @{ int sl = 1;}
+                @foreach (var product in Model.Products)
+                {
+                    <tr>
+                        <td>@(sl++)</td>
+                        <td>@product.ProductCode</td>
+                        <td>@product.ProductName</td>
+                        <td>@product.CategoryID</td>
+                        <td>@product.ProductROL</td>
+                        <td>Image</td>
+                        <td>@product.ProductDescription</td>
+                        <td>
+                            <a href="/Product/Edit?ID=@product.ID" class="btn btn-primary btn-xs" title="Edit">
+                                <span class="glyphicon glyphicon-edit">Edit</span>
+                            </a>
+                            <a href="/Product/Delete?ID=@product.ID" onclick="return confirm('Are you sure to delete this !!');" class="btn btn-danger btn-xs" title="Delete">
+                                <span class="glyphicon glyphicon-trash">Delete</span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
